@@ -33,7 +33,7 @@ return [
                 'host' => 'localhost',
                 'dbname' => 'desafio',
                 'username' => 'root',
-                'password' => 'toogas123',
+                'password' => '*****',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
                 'initStatements' => 'SET NAMES utf8;',
