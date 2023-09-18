@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hibrido_MetTagMultiSite::management"
+             title="MetTagMultiSite"
+             module="Hibrido_MetTagMultiSite"
+             sortOrder="99"
+             parent="Hibrido_Core::management"
+             resource="Hibrido_MetTagMultiSite::management"/>
+        <add id="Hibrido_MetTagMultiSite::enable"
+             title="Meta Tag Multi Site"
+             module="Hibrido_MetTagMultiSite"
+             sortOrder="10"
+             parent="Hibrido_MetTagMultiSite::management"
+             action="admin/system_config/edit/section/meta_tag_multi_site"
+             resource="Hibrido_MetTagMultiSite::enable"/>
+
+    </menu>
+</config>

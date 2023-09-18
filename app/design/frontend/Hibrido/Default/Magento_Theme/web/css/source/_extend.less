@@ -1,0 +1,66 @@
+& when (@media-common = true) {
+    .cms-index-index {
+
+        .slick-prev, .slick-next {
+            background: none;
+            width: @indent__base * 2;
+            height: @indent__base * 2;
+            border-radius: 50%;
+            right: @indent__xs;
+            font-size: 0 !important;
+            z-index: 99;
+            background-color: @color-white;
+
+            &:before {
+                font-size: @font-size__m;
+                color: @color-black;
+                padding: 0;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-prev {
+            left: @indent__xs;
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: @indent__xs;
+            padding: 0;
+
+            li {
+                margin: 0 @indent__xxs / 2;
+                height: @indent__xxs;
+                width: auto;
+
+                button {
+                    height: @indent__xxs;
+                    width: @indent__xxs;
+                    border: none;
+                    background: @color-black;
+                    opacity: 0.6;
+                    margin: 0;
+                }
+            }
+
+            .slick-active {
+                button {
+                    background: @color-white;
+                    width: @indent__m;
+                    height: @indent__xxs;
+                    border: none;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+}

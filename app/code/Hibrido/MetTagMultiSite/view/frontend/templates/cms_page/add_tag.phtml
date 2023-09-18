@@ -1,0 +1,14 @@
+<?php
+/**
+ * @author   Victor Souza <vic.teodoros@gmail.com>
+ */
+/** @var  $block Hibrido\MetTagMultiSite\Block\AddMetaTag */
+?>
+<?php foreach ($block->getInfoPage() as $code): ?>
+    <link
+        rel="alternate"
+        hreflang="<?= $block->escapeHtml($code) ?>"
+        href="<?= $block->escapeUrl($block->getWebUrl($code)) ?>""
+    >
+<?php endforeach; ?>
+

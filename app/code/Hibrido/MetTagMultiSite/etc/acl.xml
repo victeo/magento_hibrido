@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Hibrido_Core::management">
+                    <resource id="Hibrido_MetTagMultiSite::management" title="Meta Tag Multi Site" translate="label">
+                        <resource id="Hibrido_MetTagMultiSite::enable" title="Enable" translate="label"/>
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Hibrido_MetTagMultiSite::config_hibrido_mettagmultisite"
+                                      title="meta_tag_multi_site"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

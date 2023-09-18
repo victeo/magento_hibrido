@@ -1,0 +1,15 @@
+<!--
+/**
+ *
+ * @package
+ * @author   Victor Souza <vic.teodoros@gmail.com>
+ * @license  http://opensource.org/licenses/osl-3.0.php Open Software License OSL3.0 */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="hibrido" sortOrder="999" translate="label" class="hibrido-extensions">
+            <label>Hibrido</label>
+        </tab>
+    </system>
+</config>

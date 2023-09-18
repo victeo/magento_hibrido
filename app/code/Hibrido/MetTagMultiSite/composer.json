@@ -1,0 +1,22 @@
+{
+    "name": "hibrido/module-mettagmultisite",
+    "description": "Identifies which store views the block is enabled for and adds a meta tag to which ones it is enabled for",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Victor Teodoro",
+            "email": "vic.teodoros@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Hibrido\\MetTagMultiSite\\": ""
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px) {
+    body .page-header .content .minicart-wrapper .ui-dialog .block-minicart {
+        height: calc((var(--vh, 1vh) * 100));
+    }
+
+    .minicart-wrapper .block.block-minicart .minicart-items-wrapper {
+        max-height: calc((var(--vh, 1vh) * 100) - 270px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .checkout-index-index .modals-wrapper .modal-popup.modal-slide.modal-new-shipping-address .modal-inner-wrap {
+        max-height: calc((var(--vh, 1vh) * 100) - 180px);
+    }
+
+    .modal-popup.modal-customizable-products .modal-inner-wrap {
+        height: calc((var(--vh, 1vh) * 100));
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .minicart-wrapper .block.block-minicart .minicart-items-wrapper {
+        max-height: calc((var(--vh, 1vh) * 100) - 300px);
+    }
+}
+
+@media screen and (min-width: 1026px) {
+    .minicart-wrapper .block.block-minicart .minicart-items-wrapper {
+        max-height: calc((100 * var(--vh, 1vh)) - 270px);
+    }
+}
