@@ -60,7 +60,19 @@
                 }
             }
         }
-
     }
 
+}
+
+// Mixin application
+.action, button, .action.primary, .action-primary, .action.primary-alt, .action-primary-alt {
+    .lib-button-custom();
+}
+
+a.primary, button.primary, .action.primary {
+    &:active, &:focus, &:focus-within, &:focus-visible {
+        background: @button-primary__active__background;
+        border: @button-primary__active__border;
+        color: @button-primary__active__color;
+    }
 }

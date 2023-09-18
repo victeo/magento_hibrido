@@ -1,8 +1,10 @@
+@import '_custom';
 //
 //  Standard
 //  _____________________________________________
-@theme__color__primary: #003EA5;
-@theme__color__secondary: #0554F6;
+@theme__color__primary: #6DA57F;
+@theme__color__secondary: #FFFFF5;
+@theme__color__black: #000000;
 @theme__color__primary-alt: @color-white;
 @primary__color__lighter: #62B4FA;
 
@@ -44,6 +46,7 @@
 @primary__color: @color-gray1;
 @error__color: @color-red;
 
+@color-brown: #734930;
 
 //
 //  Fonts
@@ -103,5 +106,21 @@
 
 //  Primary button
 @button-primary__color: @color-white;
-@button-primary__background: @theme__color__secondary;
+@button-primary__background: @theme__color__black;
 @button-primary__border: 1px solid @theme__color__secondary;
+
+@button-primary__hover__color: @color-white;
+@button-primary__hover__background: @theme__color__primary;
+@button-primary__hover__border: 1px solid @theme__color__primary;
+
+@button-primary__active__color: @color-white;
+@button-primary__active__background: @button-primary__background;
+@button-primary__active__border: @button-primary__border;
+
+//  Display settings
+@button__border-radius: 0;
+@button__padding: 13px;
+@button__height: auto;
+@button-custom__line-height: 1;
+@button__disabled__opacity: .3;
+@button__padding__l: 12px 50px;

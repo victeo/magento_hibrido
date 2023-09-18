@@ -1,0 +1,101 @@
+
+.page-header {
+    background-color: @theme__color__secondary;
+    height: 80px;
+
+    .header.content {
+        padding: 14px 30px 14px 30px;
+        max-width: 1440px;
+
+        .logo {
+            width: @indent__base * 5;
+            margin: unset;
+        }
+    }
+
+    .header-custom-actions {
+        .lib-vendor-prefix-display(flex);
+        justify-content: center;
+        .lib-vendor-box-align(center);
+        gap: @indent__s;
+        margin: @indent__s 0 0 0;
+        float: right;
+
+        .header.links {
+            .lib-vendor-prefix-display(flex);
+            justify-content: center;
+            .lib-vendor-box-align(center);
+            margin: unset;
+            gap: @indent__xs;
+
+            li {
+                margin: unset;
+
+                a {
+                    color: @theme__color__primary;
+                }
+            }
+        }
+    }
+}
+.cms-index-index{
+    .pagebuilder-slider{
+        .slide-left, .slide-right{
+            .pagebuilder-overlay{
+                height: 100%;
+                margin: auto 0;
+                max-width: 540px;
+                .pagebuilder-collage-content{
+                    .lib-vendor-prefix-display(flex);
+                    justify-content: center;
+                    flex-direction: column;
+                    .lib-vendor-box-align(center);
+                    margin-top: ~"calc(50% - 45px)";
+
+                    [data-element="content"] {
+                        .lib-vendor-prefix-display(flex);
+                        flex-direction: column;
+                        gap: @indent__s + 2;
+                        font-size: @h2__font-size;
+                        padding: @indent__m;
+                        border: solid 1px @color-brown;
+                        width: 75%;
+                    }
+                }
+
+            }
+        }
+        .slide-right{
+            .pagebuilder-overlay{
+                margin-left: auto;
+                .pagebuilder-collage-content{
+                    margin-right: 24px;
+                    [data-element="content"] {
+                        width: unset;
+                    }
+                }
+
+            }
+        }
+    }
+    .block-info{
+        background-color: @theme__color__secondary;
+
+        &__column{
+            padding: @indent__m;
+
+            &__img{
+                max-width: @indent__base * 4;
+                margin: 0 auto @indent__xl;
+            }
+
+            &__title{
+                font-size: @font-size__xl;
+            }
+
+            &__text{
+                font-size: @font-size__s;
+            }
+        }
+    }
+}

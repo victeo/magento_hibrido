@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- Add Bootstrap and Fontawesome -->
+        <css src="Magento_Theme::css/bootstrap.min.css" />
+        <css src="Magento_Theme::css/reset-bootstrap.min.css" />
+        <css src="Magento_Theme::css/fontawesome/css/all.min.css" />
+        <css src="Magento_Theme::css/fontawesome-v4-shims.min.css" />
+        <css src="Magento_Theme::css/mobile-viewport.css" />
+        <css src="Magento_Theme::css/support.css" />
+
+        <!-- Re-state magento css to override BS -->
+        <css src="css/styles-m.css" media="all"/>
+        <css src="css/styles-l.css" media="screen and (min-width: 1025px)"/>
+        <css src="css/print.css" media="print"/>
+
+        <!-- standard helper script -->
+        <script src="Magento_Theme::js/mobile-viewport.js" />
+        <script src="Magento_Theme::js/custom.js" />
+
+        <!-- cookiebot script -->
+        <script src="Magento_Theme::js/cookiebot.js"/>
+    </head>
+</page>

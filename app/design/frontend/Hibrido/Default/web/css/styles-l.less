@@ -1,0 +1,57 @@
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+//
+//  Blank theme desktop styles
+//  _____________________________________________
+
+//  These desktop styles are additional to mobile
+
+//
+//  Global lib + theme styles
+//  ---------------------------------------------
+
+@import '_styles.less';
+
+//
+//  Magento Import instructions
+//  ---------------------------------------------
+
+//@magento_import 'source/_module.less'; // Theme modules
+//@magento_import 'source/_widgets.less'; // Theme widgets
+
+//
+//  Media queries collector
+//  ---------------------------------------------
+
+@import 'source/lib/_responsive.less';
+
+@media-target: 'desktop'; // Sets target device for this file
+@media-common: false; // Sets not to output common styles
+
+//
+//  Global variables override
+//  ---------------------------------------------
+
+@import 'source/_theme.less';
+
+//
+//  Extend for minor customisation
+//  ---------------------------------------------
+
+//@magento_import 'source/_common/_module.less';
+//@magento_import 'source/_extend.less';
+// Desktop (>= 1025px)
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    //@magento_import 'source/_desktop/_module.less';
+    //@magento_import 'source/_desktop/_extend.less';
+}
+
+// Large (>= 1440px)
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+    //@magento_import 'source/_highres/_module.less';
+    //@magento_import 'source/_highres/_extend.less';
+}

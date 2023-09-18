@@ -1,0 +1,89 @@
+//  FONTS
+
+//
+//  This file should be used if the new theme has custom fonts.
+//  You should add the new fonts in web/css/fonts directory and
+//  use the example bellow to apply them.
+//  _____________________________________________
+
+
+@font-family-name__base: 'Poppins';
+
+
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+
+& when (@media-common = true) {
+    // ----------------- Poppins ----------------------- //
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Thin',
+        @font-format: false,
+        @font-weight: 100,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-ExtraLight',
+        @font-weight: 200,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Light',
+        @font-weight: 300,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Regular',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Medium',
+        @font-weight: 500,
+        @font-style: normal,
+        @font-display: swap
+    );
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-SemiBold',
+        @font-weight: 600,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Bold',
+        @font-weight: 700,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-ExtraBold',
+        @font-weight: 800,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base,
+        @font-path: '@{baseDir}fonts/Poppins/Poppins-Black',
+        @font-weight: 900,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+}

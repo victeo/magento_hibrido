@@ -1,0 +1,25 @@
+.lib-button-custom() {
+    outline: 3px solid transparent;
+    padding: 0 @indent__base;
+    height: @button__height;
+
+    &:not(a) {
+        line-height: @button-custom__line-height;
+        font-size: 0;
+    }
+
+    &:focus-visible, &:focus, &:focus-within {
+        outline: 3px solid @color-blue4;
+    }
+
+    span, i {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        font-size: @button__font-size;
+
+        ~ span, ~ i {
+            margin-left: @indent__xxs;
+        }
+    }
+}

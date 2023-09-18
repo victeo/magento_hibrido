@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="compare-link-wrapper" remove="true"/>
+        <referenceBlock name="invitation_link_top" remove="true" />
+        <referenceBlock name="wishlist_sidebar" display="false" />
+        <referenceBlock name="catalog.compare.sidebar" display="false" />
+        <referenceBlock name="sale.reorder.sidebar" display="false" />
+
+<!--        <referenceBlock name="my-account-link" template="Magento_Customer::account/custom-link.phtml" >-->
+<!--            <arguments>-->
+<!--                <argument name="view_model_logged_in" xsi:type="object">Toogas\CustomerAttributes\ViewModel\LoggedIn-->
+<!--                </argument>-->
+<!--            </arguments>-->
+<!--        </referenceBlock>-->
+
+        <referenceContainer name="header-wrapper">
+            <container name="header.custom.actions" htmlTag="div" htmlClass="header-custom-actions" after="-"/>
+        </referenceContainer>
+
+        <move element="minicart" destination="header.custom.actions" after="-"/>
+        <move element="top.links" destination="header.custom.actions" before="minicart"/>
+        <move element="top.search" destination="header.custom.actions" before="top.links"/>
+
+        <referenceBlock name="multiple-wish-list-link">
+            <arguments>
+                <argument name="sortOrder" xsi:type="number">200</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="navigation.sections">
+            <block class="Magento\Framework\View\Element\Template" name="menu.header" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Menu Header</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Template" name="portal.link" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Portal Link</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceBlock  class="Magento\Framework\View\Element\Template" name="store.links" template="Magento_Theme::html/container.phtml" />
+
+        <move element="authorization-link-login" destination="store.links" before="-" />
+
+
+
+        <referenceContainer name="footer">
+            <container name="footer.header" htmlTag="div" htmlClass="footer-col footer-header">
+                <block class="Magento\Cms\Block\Block" name="footer.socials">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_socials</argument>
+                    </arguments>
+                </block>
+            </container>
+
+            <container name="footer-main-content" htmlTag="div" htmlClass="footer-main-content row">
+                <container name="footer.links" htmlTag="div" htmlClass="footer-col footer-links col-12 col-lg-9">
+                    <block class="Magento\Cms\Block\Block" name="footer-links">
+                        <arguments>
+                            <argument name="title" xsi:type="string" translate="true">Follow Us</argument>
+                            <argument name="block_id" xsi:type="string">footer-links</argument>
+                        </arguments>
+                    </block>
+                </container>
+
+                <container name="footer-newsletter" htmlTag="div" htmlClass="footer-col footer-newsletter col-12 col-lg-3"/>
+            </container>
+
+            <container name="footer-copyright" htmlTag="div" htmlClass="footer-copyright" after="footer">
+                <container name="copyright-infos" htmlTag="div" htmlClass="main-container">
+                    <block class="Magento\Cms\Block\Block" name="footer_payment_methods">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_payment_methods</argument>
+                        </arguments>
+                    </block>
+
+                    <referenceBlock name="store_language" template="Magento_Store::switch/languages.phtml" />
+                </container>
+            </container>
+        </referenceContainer>
+
+        <move element="footer-copyright" destination="footer-container" after="-"/>
+        <move element="form.subscribe" destination="footer-newsletter"/>
+        <move element="copyright" destination="copyright-infos" before="footer_payment_methods"/>
+        <move element="store_language" destination="copyright-infos" before="-"/>
+        <referenceBlock name="footer_links" remove="true"/>
+
+        <referenceBlock name="authentication-popup" remove="true"/>
+        <referenceBlock name="store_switcher" display="false"/>
+    </body>
+</page>
